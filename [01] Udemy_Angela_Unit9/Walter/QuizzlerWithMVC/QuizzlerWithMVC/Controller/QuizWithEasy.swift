@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuizWithEasy: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var btnO: UIButton!
@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var score: UILabel!
     
-    var quizs = Quizs()
+    var quizs = EasyQuis()
     
     override func viewDidLoad() {
         super.viewDidLoad()

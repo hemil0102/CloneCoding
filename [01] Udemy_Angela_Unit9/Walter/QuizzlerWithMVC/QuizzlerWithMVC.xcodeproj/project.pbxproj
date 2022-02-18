@@ -7,27 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9347DF2827BE5E7000A11FE6 /* QuizWithHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347DF2727BE5E7000A11FE6 /* QuizWithHard.swift */; };
+		9347DF2A27BE5F9B00A11FE6 /* HardQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347DF2927BE5F9B00A11FE6 /* HardQuiz.swift */; };
+		9347DF2C27BE602600A11FE6 /* ModelForHardQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347DF2B27BE602600A11FE6 /* ModelForHardQuiz.swift */; };
 		93BFD05527BCF372006DEFDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFD05427BCF372006DEFDF /* AppDelegate.swift */; };
 		93BFD05727BCF372006DEFDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFD05627BCF372006DEFDF /* SceneDelegate.swift */; };
-		93BFD05927BCF372006DEFDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFD05827BCF372006DEFDF /* ViewController.swift */; };
+		93BFD05927BCF372006DEFDF /* QuizWithEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFD05827BCF372006DEFDF /* QuizWithEasy.swift */; };
 		93BFD05C27BCF372006DEFDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BFD05A27BCF372006DEFDF /* Main.storyboard */; };
 		93BFD05E27BCF374006DEFDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BFD05D27BCF374006DEFDF /* Assets.xcassets */; };
 		93BFD06127BCF374006DEFDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BFD05F27BCF374006DEFDF /* LaunchScreen.storyboard */; };
-		93BFD06C27BCF3F1006DEFDF /* Quizs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFD06B27BCF3F1006DEFDF /* Quizs.swift */; };
-		93BFD06E27BCF3FD006DEFDF /* ModelOfQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFD06D27BCF3FD006DEFDF /* ModelOfQuiz.swift */; };
+		93BFD06C27BCF3F1006DEFDF /* EasyQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFD06B27BCF3F1006DEFDF /* EasyQuiz.swift */; };
+		93BFD06E27BCF3FD006DEFDF /* ModelForEasyQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BFD06D27BCF3FD006DEFDF /* ModelForEasyQuiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9347DF2727BE5E7000A11FE6 /* QuizWithHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWithHard.swift; sourceTree = "<group>"; };
+		9347DF2927BE5F9B00A11FE6 /* HardQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardQuiz.swift; sourceTree = "<group>"; };
+		9347DF2B27BE602600A11FE6 /* ModelForHardQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForHardQuiz.swift; sourceTree = "<group>"; };
 		93BFD05127BCF372006DEFDF /* QuizzlerWithMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzlerWithMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BFD05427BCF372006DEFDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BFD05627BCF372006DEFDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93BFD05827BCF372006DEFDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93BFD05827BCF372006DEFDF /* QuizWithEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWithEasy.swift; sourceTree = "<group>"; };
 		93BFD05B27BCF372006DEFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93BFD05D27BCF374006DEFDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93BFD06027BCF374006DEFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93BFD06227BCF374006DEFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93BFD06B27BCF3F1006DEFDF /* Quizs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizs.swift; sourceTree = "<group>"; };
-		93BFD06D27BCF3FD006DEFDF /* ModelOfQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOfQuiz.swift; sourceTree = "<group>"; };
+		93BFD06B27BCF3F1006DEFDF /* EasyQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyQuiz.swift; sourceTree = "<group>"; };
+		93BFD06D27BCF3FD006DEFDF /* ModelForEasyQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForEasyQuiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,10 @@
 		93BFD06927BCF3CF006DEFDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93BFD06B27BCF3F1006DEFDF /* Quizs.swift */,
-				93BFD06D27BCF3FD006DEFDF /* ModelOfQuiz.swift */,
+				93BFD06B27BCF3F1006DEFDF /* EasyQuiz.swift */,
+				93BFD06D27BCF3FD006DEFDF /* ModelForEasyQuiz.swift */,
+				9347DF2927BE5F9B00A11FE6 /* HardQuiz.swift */,
+				9347DF2B27BE602600A11FE6 /* ModelForHardQuiz.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,7 +100,8 @@
 		93BFD06A27BCF3D6006DEFDF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				93BFD05827BCF372006DEFDF /* ViewController.swift */,
+				93BFD05827BCF372006DEFDF /* QuizWithEasy.swift */,
+				9347DF2727BE5E7000A11FE6 /* QuizWithHard.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,11 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93BFD05927BCF372006DEFDF /* ViewController.swift in Sources */,
+				93BFD05927BCF372006DEFDF /* QuizWithEasy.swift in Sources */,
+				9347DF2C27BE602600A11FE6 /* ModelForHardQuiz.swift in Sources */,
 				93BFD05527BCF372006DEFDF /* AppDelegate.swift in Sources */,
-				93BFD06C27BCF3F1006DEFDF /* Quizs.swift in Sources */,
-				93BFD06E27BCF3FD006DEFDF /* ModelOfQuiz.swift in Sources */,
+				93BFD06C27BCF3F1006DEFDF /* EasyQuiz.swift in Sources */,
+				93BFD06E27BCF3FD006DEFDF /* ModelForEasyQuiz.swift in Sources */,
 				93BFD05727BCF372006DEFDF /* SceneDelegate.swift in Sources */,
+				9347DF2A27BE5F9B00A11FE6 /* HardQuiz.swift in Sources */,
+				9347DF2827BE5E7000A11FE6 /* QuizWithHard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
