@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ModelOfQuiz {
+struct ModelForEasyQuiz {
     let question: String
     let answer: String
     
