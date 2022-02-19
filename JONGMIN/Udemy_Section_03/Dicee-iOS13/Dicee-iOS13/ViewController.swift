@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         //앱 실행시 이미지 불러오기
         diceImageView1.image = UIImage(named: "DiceSix")
-        diceImageView1.alpha = 0.5
+        //diceImageView1.alpha = 0.5
         
         diceImageView2.image = UIImage(named: "DiceTwo")
 
@@ -32,11 +32,11 @@ class ViewController: UIViewController {
 //        diceImageView1.image = UIImage(named: "DiceFour")
 //        diceImageView2.image = UIImage(named: "DiceThree")
         
-        let leftDiceNumber = Int.random(in: 0...5)
+        let diceArray = [UIImage(named: "DiceOne"), UIImage(named: "DiceTwo"), UIImage(named: "DiceThree"), UIImage(named: "DiceFour"), UIImage(named: "DiceFive"), UIImage(named: "DiceSix")]
         
-        diceImageView1.image = [UIImage(named: "DiceOne"), UIImage(named: "DiceTwo"), UIImage(named: "DiceThree"), UIImage(named: "DiceFour"), UIImage(named: "DiceFive"), UIImage(named: "DiceSix")][leftDiceNumber]
+        diceImageView1.image = diceArray.randomElement()!
         
-        diceImageView2.image = [UIImage(named: "DiceOne"), UIImage(named: "DiceTwo"), UIImage(named: "DiceThree"), UIImage(named: "DiceFour"), UIImage(named: "DiceFive"), UIImage(named: "DiceSix")][leftDiceNumber]
+        diceImageView2.image = diceArray[Int.random(in: 0...5)]
     }
     
 
