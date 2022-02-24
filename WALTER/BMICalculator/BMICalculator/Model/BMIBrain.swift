@@ -17,6 +17,9 @@ struct BMIBrain {
     mutating func configPicker(startH:Int, endH:Int, startW:Int, endW:Int) {
         for h in startH...endH { self.bmiPicker.height.append(h) }
         for w in startW...endW { self.bmiPicker.weight.append(w) }
+        
+        self.currHeight = Float(self.bmiPicker.height[0])
+        self.currWeight = Float(self.bmiPicker.weight[0])
     }
     
     //Convert to String and setting the picker with Height Data
