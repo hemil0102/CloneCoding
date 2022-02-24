@@ -10,48 +10,44 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var height_weight_picker: UIPickerView!
-    var heightForPicker:[String] = []
-    var weightForPicker:[String] = []
-    var height:String?
-    var weight:String?
+    var bmiBrain = BMIBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //PickerView Setting
         pickerViewConfig()
     }
     
+    //PickerView Setting
     func pickerViewConfig() {
-        for heightI in 160...190 {
-            heightForPicker.append(String(heightI))
-        }
-        
-        for weightI in 40...100 {
-            weightForPicker.append(String(weightI))
-        }
-        height = heightForPicker[0]
-        weight = weightForPicker[0]
+        bmiBrain.configPicker(startH: 140, endH: 200, startW: 40, endW: 100)
         
         height_weight_picker.delegate = self
         height_weight_picker.dataSource = self
     }
-
+    
+    //BMI 확인 버튼 액션
     @IBAction func checkBMI(_ sender: UIButton) {
-        //bmi 계산
-        var bmi:Float = 0.0
-        if let w = weight, let h = height {
-            bmi = (Float(w)! / pow(Float(h)!/100, 2))
-        }
+        //계산
+        bmiBrain.calculateBMI()
         
         //alert 띄우기
-        showBmi(b: bmi)
+        showBmi()
     }
     
-    func showBmi(b bmi: Float) {
-//        let bmiFormat = String(format: "%.1f", bmi)
-        let alert = UIAlertController(title: "나의 BMI", message: "BMI : \(bmi)", preferredStyle: .alert)
+    //Alert 출력
+    func showBmi() {
+        let bmi = bmiBrain.getBMI()
+        let advice = bmiBrain.getAdvice()
+        let imoticon = bmiBrain.getImoticon()
+        
+        let alert = UIAlertController(title: "나의 BMI", message: """
+                    \(bmi)
+                    \(advice) \(imoticon)
+                    """, preferredStyle: .alert)
         let okBtn = UIAlertAction(title: "OK", style: .default)
-                                  
+        
         alert.addAction(okBtn)
         
         self.present(alert, animated: true, completion: nil)
@@ -59,40 +55,40 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIPickerViewDelegate {
+    //Picker 각 row 에 이름 배치
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
-            return self.heightForPicker[row]
+            return self.bmiBrain.getHeightWithString(row: row)
         case 1:
-            return self.weightForPicker[row]
+            return self.bmiBrain.getWeightWithString(row: row)
         default:
             return nil
         }
     }
     
+    //선택 되었을 때
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch component {
         case 0:
-            height = heightForPicker[row]
+            self.bmiBrain.setHeight(row: row)
         case 1:
-            weight = weightForPicker[row]
+            self.bmiBrain.setWeight(row: row)
         default:
             break
         }
     }
 }
 
+//Picker 각 갯수
 extension ViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
-    }
-    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int { return 2 }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
         case 0:
-            return heightForPicker.count
+            return self.bmiBrain.heightCount()
         case 1:
-            return weightForPicker.count
+            return self.bmiBrain.weightCount()
         default:
             return 0
         }

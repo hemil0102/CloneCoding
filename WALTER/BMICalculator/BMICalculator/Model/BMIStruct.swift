@@ -12,3 +12,8 @@ struct BMIStruct {
     var advice: String
     var imoticon: String
 }
+
+struct BMIPicker {
+    var height = [Int]()
+    var weight = [Int]()
+}
