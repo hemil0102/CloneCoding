@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         for weightI in 40...100 {
             weightForPicker.append(String(weightI))
         }
+        height = heightForPicker[0]
+        weight = weightForPicker[0]
         
         height_weight_picker.delegate = self
         height_weight_picker.dataSource = self
@@ -38,7 +40,7 @@ class ViewController: UIViewController {
         //bmi 계산
         var bmi:Float = 0.0
         if let w = weight, let h = height {
-            bmi = (Float(w)! / pow(Float(h)!, 2))
+            bmi = (Float(w)! / pow(Float(h)!/100, 2))
         }
         
         //alert 띄우기
@@ -46,12 +48,9 @@ class ViewController: UIViewController {
     }
     
     func showBmi(b bmi: Float) {
-        let bmiFormat = String(format: "%.1f", (bmi * 100))
-        let alert = UIAlertController(title: "나의 BMI", message: "BMI : \(bmiFormat)", preferredStyle: .alert)
-        
-        let okBtn = UIAlertAction(title: "OK", style: .default) { action in
-            print("OK")
-        }
+//        let bmiFormat = String(format: "%.1f", bmi)
+        let alert = UIAlertController(title: "나의 BMI", message: "BMI : \(bmi)", preferredStyle: .alert)
+        let okBtn = UIAlertAction(title: "OK", style: .default)
                                   
         alert.addAction(okBtn)
         
