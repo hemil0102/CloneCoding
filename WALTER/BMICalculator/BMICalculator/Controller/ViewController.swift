@@ -46,7 +46,8 @@ class ViewController: UIViewController {
     }
     
     func showBmi(b bmi: Float) {
-        let alert = UIAlertController(title: "나의 BMI", message: "BMI : \(bmi)", preferredStyle: .alert)
+        let bmiFormat = String(format: "%.1f", (bmi * 100))
+        let alert = UIAlertController(title: "나의 BMI", message: "BMI : \(bmiFormat)", preferredStyle: .alert)
         
         let okBtn = UIAlertAction(title: "OK", style: .default) { action in
             print("OK")
